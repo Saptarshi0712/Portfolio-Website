@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // Only once
+  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio-Website/' : '',
   images: {
     remotePatterns: [
@@ -14,7 +14,7 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
   compiler: {
     styledComponents: true,
