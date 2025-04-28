@@ -1,24 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/Portfolio-Website',
-  assetPrefix: '/Portfolio-Website/',
-  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // ✅ Must start with '/'
+  basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // Only once
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portfolio-Website/' : '',
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'img.freepik.com', // ✅ Freepik
+        hostname: 'img.freepik.com',
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com', // ✅ Unsplash
+        hostname: 'images.unsplash.com',
       },
     ],
-    unoptimized: true, // ✅ Required for static export
+    unoptimized: true, // Required for static export
   },
   compiler: {
-    styledComponents: true, // ✅ If you use styled-components
+    styledComponents: true,
   },
 };
 
