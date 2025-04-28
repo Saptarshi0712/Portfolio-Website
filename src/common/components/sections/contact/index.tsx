@@ -15,7 +15,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
 
   const serviceID = "service_m6pexsn"; 
-  const templateID = "template_gmukpkn"; 
+  const templateID = "template_w8a4syh"; 
   const publicKey = "aWAZOmzTp8dbMGIaN"; 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
