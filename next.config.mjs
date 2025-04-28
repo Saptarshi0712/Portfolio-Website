@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Enable static exports
+  output: 'export',
+  basePath: '/Portfolio-Website',
+  assetPrefix: '/Portfolio-Website/',
   basePath: process.env.NODE_ENV === 'production' ? '/Portfolio-Website' : '', // ✅ Must start with '/'
   images: {
     remotePatterns: [
