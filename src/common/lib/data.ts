@@ -54,7 +54,7 @@ export const projectsData = [
     description: `A platform for users to donate and request books, promoting a culture of sharing and sustainability.`,
     tags: ['React', 'Javascript', 'HTML', 'CSS', 'Nodejs'],
     imageUrl: auditMasterImg,
-    link: 'https://github.com/jagat1111/Book-Donation-System',
+    link: 'https://github.com/Saptarshi0712/Book-Donation-System',
   },
   {
     title: 'Packet Sniffer',
@@ -62,7 +62,7 @@ export const projectsData = [
       'A packet sniffer is a tool that captures and analyzes network traffic, allowing users to monitor data packets transmitted over a network.',
     tags: ['python', 'socket programming'],
     imageUrl: accountingImg,
-    link: 'https://github.com/jagat1111/Packet-Sniffer',
+    link: 'https://github.com/Saptarshi0712/Packet-Sniffer',
   },
   {
     title: 'Hotel Management System',
@@ -70,7 +70,7 @@ export const projectsData = [
       'A web application for managing hotel operations, including room bookings, customer management, and billing.',
     tags: ["React", "Javascript", "HTML", "CSS", "Nodejs"],
     imageUrl: filedriveImg,
-    link: 'https://github.com/jagat1111/hotel-webpage',
+    link: 'https://github.com/Saptarshi0712/hotel-webpage',
   },
 ] as const;
 

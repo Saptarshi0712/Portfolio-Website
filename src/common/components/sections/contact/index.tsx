@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/common/lib/hooks";
 import SubmitBtn from "./_components/submit-btn";
@@ -14,20 +14,9 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [email, setEmail] = useState("");
 
-  // ✅ Hardcoded EmailJS public values
-  const serviceID = "service_ve6slta"; // replace this
-  const templateID = "template_mtqwtvc"; // replace this
-  const publicKey = "VwHLyRBxoKa4w-YmP"; // replace this
-
-  /*
-  NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_ve6slta
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_mtqwtvc
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=VwHLyRBxoKa4w-YmP
-  */
-
-  useEffect(() => {
-    emailjs.init(publicKey);
-  }, []);
+  const serviceID = "service_m6pexsn"; 
+  const templateID = "template_gmukpkn"; 
+  const publicKey = "aWAZOmzTp8dbMGIaN"; 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,33 +25,16 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=VwHLyRBxoKa4w-YmP
     try {
       if (!formRef.current) return;
 
-      // Create hidden input fields
-      const hiddenNameInput = document.createElement("input");
-      hiddenNameInput.type = "hidden";
-      hiddenNameInput.name = "name";
-      hiddenNameInput.value = email;
-      formRef.current.appendChild(hiddenNameInput);
-
-      const hiddenEmailInput = document.createElement("input");
-      hiddenEmailInput.type = "hidden";
-      hiddenEmailInput.name = "email";
-      hiddenEmailInput.value = email;
-      formRef.current.appendChild(hiddenEmailInput);
-
-      await emailjs.sendForm(serviceID, templateID, formRef.current);
-
-      // Remove hidden inputs after sending
-      formRef.current.removeChild(hiddenNameInput);
-      formRef.current.removeChild(hiddenEmailInput);
+      await emailjs.sendForm(serviceID, templateID, formRef.current, publicKey);
 
       toast.success("Email sent successfully!");
       formRef.current.reset();
-      setEmail("");
+      setEmail(""); // Clear email field
     } catch (error) {
       console.error("Failed to send email:", error);
       const errorMessage = error instanceof Error ? error.message : "Failed to send email";
       toast.error(errorMessage);
-      toast.error("Please contact me directly at jagat0422@gmail.com");
+      toast.error("Please contact me directly at saptarshirpattanayak2004@gmail.com");
     } finally {
       setIsSubmitting(false);
     }
@@ -82,8 +54,8 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=VwHLyRBxoKa4w-YmP
       <div className="w-[min(100%,38rem)] px-4">
         <p className="mb-20 mt-6 text-gray-700 dark:text-white/80">
           Please contact me directly at{" "}
-          <a className="underline" href="mailto:jagat0422@gmail.com">
-            jagat0422@gmail.com
+          <a className="underline" href="mailto:saptarshirpattanayak2004@gmail.com">
+            saptarshirpattanayak2004@gmail.com
           </a>{" "}
           or through this form.
         </p>
@@ -95,7 +67,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=VwHLyRBxoKa4w-YmP
         >
           <input
             className="h-14 rounded-lg border bg-gray-50 px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:placeholder:text-darkBg dark:focus:bg-opacity-100"
-            name="from_email"
+            name="from_email" // must match your EmailJS template!
             type="email"
             required
             maxLength={500}
@@ -105,7 +77,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=VwHLyRBxoKa4w-YmP
           />
           <textarea
             className="my-3 h-52 resize-none rounded-lg border bg-gray-50 p-4 transition-all dark:bg-opacity-80 dark:outline-none dark:placeholder:text-darkBg dark:focus:bg-opacity-100"
-            name="message"
+            name="message" // must match your EmailJS template!
             placeholder="Your message 👋"
             required
             maxLength={5000}

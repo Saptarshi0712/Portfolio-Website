@@ -1,7 +1,7 @@
 'use client';
 
 import { useSectionInView } from '@/common/lib/hooks';
-import portfolioImg from '@/../public/images/coderpic.jpg';
+import portfolioImg from '@/../public/coderpic.png';
 import { smoothScrollTo } from '@/common/lib/utils';
 import SectionDivider from '@/common/components/shared/section-divider';
 import SectionHeading from '@/common/components/shared/section-heading';
@@ -61,7 +61,9 @@ export default function About() {
 
             {/* Text Content */}
             <div className="text-md z-40 flex flex-col gap-4 font-semibold tracking-wide text-primary sm:text-center lg:text-left lg:max-w-[580px] lg:text-lg xl:max-w-[650px]">
-            <span> I&apos;m a Cyber Security Expert with extensive experience in identifying, mitigating, and preventing security vulnerabilities, including SQL injection and other critical threats. I have a strong background in securing web applications and systems, ensuring robust protection against evolving cyber threats. </span> <span> I&apos;m seeking opportunities to leverage my expertise in cyber security to safeguard digital infrastructures, improve security protocols, and protect sensitive data. </span>              <p className="flex flex-col items-center lg:items-start">
+            <span> I&apos;m a Software Testing Specialist with extensive experience in identifying, analyzing, and resolving software defects, ensuring the delivery of high-quality and secure applications. I have a strong background in various testing methodologies, including functional, security, and performance testing, with a focus on enhancing system reliability and user experience. </span> 
+<span> I&apos;m seeking opportunities to leverage my expertise in software testing to ensure software quality, improve testing protocols, and contribute to the development of robust, dependable digital solutions. </span> 
+<p className="flex flex-col items-center lg:items-start">
                 <span>So if you are interested,</span>
                 <Link
                   href={'contact'}

@@ -11,14 +11,14 @@ const internships = [
     company: "Goldman Sachs",
     year: "2024",
     image: "goldman.png",
-    url: "https://drive.google.com/file/d/1spPId60umQ0n_pUD-N1Q5m6mPVGQks35/view",
+    url: "https://drive.google.com/file/d/1eIgQWzBa2knEvtYqdTj774nUAo-Zy5Mn/view?usp=sharing",
   },
   {
-    title: "Cyber Security & Ethical Hacking traning",
+    title: "Data Management System and sql",
     company: "Board Infinity",
     year: "2024",
     image: "board.png",
-    url: "https://drive.google.com/file/d/1orgvd57Z57JWrXwJGJGqfEIsdmUhgE0c/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1tOfhC0idZCMXwfTeqkotvbp5YJwHx725/view?usp=sharing",
   },
 ];
 

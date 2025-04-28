@@ -16,15 +16,15 @@ const educationData = [
     date: '2022 - 2026',
   },
   {
-    title: 'Intermidiate',
-    location: 'ODM Public School',
+    title: 'Intermediate',
+    location: 'TPS DAV Public School',
     description:
       'Studied Science and Math, excelled academically with a deep interest in tech.',
     date: '2021-2022',
   },
   {
     title: 'Matriculation',
-    location: 'Delhi Public School',
+    location: 'TPS DAV Public School',
     description: 'Began exploring computers and programming fundamentals.',
     date: '2019-2020',
   },
